@@ -2,11 +2,12 @@ import mysql.connector
 import hashlib
 import time
 from mysql.connector import errorcode
+import os
 
 # Database connection config
 DB_CONFIG = {
     'user': 'root',
-    'password': 'admin',  # <-- CHANGE PASSWORD if needed
+    "password": os.getenv("DB_PASSWORD", ""),
     'host': '127.0.0.1'
 }
 
